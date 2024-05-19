@@ -1,26 +1,11 @@
-<!-- Header -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Features</a>
-          <a class="nav-link" href="#">Pricing</a>
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-  
-        </div>
-      </div>
-    </div>
-  </nav>
+
   <!-- Product -->
-  <div class="main">
+  <div class="main ">
+
+
       <div class="product" >
-          <div class="number">{{product.number}}</div>
-          <div class="slider">
+         
+          <!-- <div class="slider">
               <div id="carouselExample" class="carousel slide">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -42,58 +27,42 @@
                     <span class="visually-hidden">Next</span>
                   </button>
                 </div>
-          </div>
+          </div> -->
           <div class="action">
-              <h3 class="action-price">{{product.price}}đ</h3>
-              <span class="action-price-sale">{{product.priceSale}}đ</span>
-                <div class="action-seller" [class.seller-none] ="isBestSeller">{{product.seller}}</div>
+              <h3 class="action-price">{{data.price}}đ</h3>
+              <span class="action-price-sale">{{data.priceSale}}đ</span>
+                <div class="action-seller" [class.seller-none] ="isBestSeller">{{data.seller}}</div>
           </div>
           <div class="heading">
-              <h3 class="heading-name">{{product.title}}</h3>
+              <h3 class="heading-name">{{data.title}}</h3>
               <div class="Evaluate">
                   <div class="Evaluate-icon">4.9</div>
                   <span class="Evaluate-number">(2000+) ></span>
               </div>
           </div>
           <div class="sub">
-              <i class="sub-des">{{product.content}}</i>
+              <i class="sub-des">{{data.content}}</i>
           </div>
           <div class="color">
               <span class="color-name">Color</span>
-              <!-- <div class="color-primary">
-                  <div (click) = "activeColor($event)" class="main-color bg-success active-color"> </div>
-                  <div (click) = "activeColor($event)" class="main-color bg-danger "></div>
-                  <div (click) = "activeColor($event)" class="main-color bg-primary "></div>
-                  <div (click) = "activeColor($event)" class="main-color bg-info "></div>
-                  <div (click) = "activeColor($event)" class="main-color bg-black "></div>
-              </div> -->
-              <!-- app.component.html -->
-          <div class="color-primary">
-            <div *ngFor="let color of colors"  class="main-color" [ngClass]="color.class" [class.active-color]="color === selectedColor" (click)="selectedColor = color">
-            </div>
+              <div class="color-primary">
+                 <div *ngFor="let color of colors"  class="main-color" [ngClass]="color.class" [class.active-color]="color === selectedColor" (click)="selectedColor = color">
+              </div>
           </div>
 
           </div>
           <div class="Size">
               <span class="Size-cm">Size (cm)</span>
-              <!-- <div class="Size-home">
-                  <div (click) = "activeSize($event)" class="Size-home-pr bg-sec black ">45*53</div>
-                  <div (click) = "activeSize($event)" class="Size-home-pr bg-sec ">42*40</div>
-                  <div (click) = "activeSize($event)" class="Size-home-pr bg-sec">40*40</div>
-                  <div (click) = "activeSize($event)" class="Size-home-pr bg-sec">35*49</div>
-              </div> -->
-
-              <div class="Size-home">
-                <div *ngFor="let size of sizes" class="Size-home-pr bg-sec" [class.black]="size === selectedSize" (click)="selectedSize = size">
-                  {{ size }}
+                <div class="Size-home">
+                  <div *ngFor="let size of sizes" class="Size-home-pr bg-sec" [class.black]="size === selectedSize" (click)="selectedSize = size">
+                    {{ size }}
+                  </div>
                 </div>
-              </div>
-      
           </div>
           <div class="Quantity">
               <div class="Quantity-hed">
                   <span class="Quantity-hed-name">Quantity</span>
-                  <div class="Quantity-hed-stock">{{product.instock}}</div>
+                  <div class="Quantity-hed-stock">{{data.instock}}</div>
               </div>
               <input class="form-control input-price" type="number">
           </div>
@@ -103,6 +72,7 @@
               <button class="interact-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Now</button>
           </div>
       </div>
+
   </div>
 
 <!-- Add product modal -->

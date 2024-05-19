@@ -1,19 +1,19 @@
 .main{
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     margin-top: 20px;
     font-family: 'Caveat', cursive;
     margin-bottom: 20px;
 }
 .product{
-    width: 470px;
+    width: 310px;
     background-color: #fff;
     border-radius: 25px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     padding: 24px;
     
 }
-.number{
+/* .number{
      background-color: #000;
      width: 40px;
      color: #fff;
@@ -22,10 +22,10 @@
      float: right;
      margin-bottom: 5px;
      font-size: 12px;
-}
+} */
 
 .slider-img{
-    height: 300px;
+    height: 150px;
 }
 .action{
     display: flex;
@@ -34,20 +34,22 @@
 .action-price{
     color: red;
     margin-right: 10px;
-    font-size: 24px;
+    font-size: 20px;
 }
 .action-price-sale{
     color: #d5d5d5;
     margin-top: 5px;
     margin-right: 10px;
     text-decoration: line-through;
+    font-size: 14px;
 }
 .action-seller{
-    width: 100px;
-    height: 25px;
+    height: 20px;
     background-color: rgb(216, 207, 78);
-    border-radius: 40px;
+    border-radius: 30px;
     text-align: center;
+    font-size: 13px;
+    padding: 0 8px;
 }
 .seller-none{
     display: none;
@@ -58,29 +60,30 @@
     margin-top: 5px;
 }
 .heading-name{
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 600;
 }
 .Evaluate{
     display: flex;
     margin-top: 3px;
-    font-size: 18px;
+    font-size: 14px;
 }
 .sub{
-    font-size: 14px;
+    font-size: 13px;
     margin-top: 5px;
 }
 
 .color{
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 16px;
 }
 .color-primary{
     display: flex;
     /* justify-content: space-evenly; */
 }
 .main-color{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     margin-left: 20px;
     cursor: pointer;
@@ -97,20 +100,20 @@
     margin-top: 10px;
 }
 .Size-cm{
-    font-size: 20px;
+    font-size: 16px;
 }
 .Size-home{
     margin-top: 10px;
     display: flex;
 }
 .Size-home-pr{
-    width: 80px;
-    height: 38px;
+    width: 62px;
+    height: 28px;
     border-radius: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
+    font-size: 11px;
     margin-left: 10px;
     cursor: pointer;
 }
@@ -129,17 +132,17 @@
     display: flex;
 }
 .Quantity-hed-name{
-    font-size: 20px;
+    font-size: 16px;
 }
 .Quantity-hed-stock{
-    font-size: 14px;
-    width: 80px;
-    height: 23px;
+    font-size: 12px;
+    height: 20px;
     background-color: rgb(168, 219, 168);
     border-radius: 60px;
     margin: 4px 0 0 10px;
     text-align: center;
     color: #4a4949;
+    padding: 0 8px;
     
 }
 .input-price{
@@ -150,13 +153,13 @@
     width: 100%;
     border: solid 2px #545252;
     display: flex;
-    padding: 12px;
+    padding: 8px;
     justify-content: space-between;
     border-radius: 10px;
 }
 .interact-btn{
-    width: 280px;
-    height: 47px;
+    width: 180px;
+    height: 40px;
     border: none;
     border-radius: 10px;
     background-color: #c7771c;
