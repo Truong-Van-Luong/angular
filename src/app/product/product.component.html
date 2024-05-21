@@ -1,33 +1,8 @@
 
   <!-- Product -->
   <div class="main ">
-
-
       <div class="product" >
-         
-          <!-- <div class="slider">
-              <div id="carouselExample" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img [src]="'assets/image/banner1.jpg'" class="d-block w-100  slider-img" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img [src]="'assets/image/banner2.jpg'" class="d-block w-100 slider-img" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img [src]="'assets/image/banner3.jpg'" class="d-block w-100 slider-img" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-          </div> -->
+        <img [src]="data.image" class="product-img" alt="">
           <div class="action">
               <h3 class="action-price">{{data.price}}đ</h3>
               <span class="action-price-sale">{{data.priceSale}}đ</span>
@@ -60,10 +35,13 @@
                 </div>
           </div>
           <div class="Quantity">
-              <div class="Quantity-hed">
+            <div class="Quantity-hed">
                   <span class="Quantity-hed-name">Quantity</span>
-                  <div class="Quantity-hed-stock">{{data.instock}}</div>
+                  <div [ngClass]="data.instock ? 'Quantity-hed-instock' : 'Quantity-hed-outstock'">
+                    {{ data.instock ? 'In Stock' : 'Out Stock' }}
+                  </div>
               </div>
+              
               <input class="form-control input-price" type="number">
           </div>
           <div class="interact">

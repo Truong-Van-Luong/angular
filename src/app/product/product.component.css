@@ -1,10 +1,4 @@
-.main{
-    /* display: flex;
-    justify-content: center; */
-    margin-top: 20px;
-    font-family: 'Caveat', cursive;
-    margin-bottom: 20px;
-}
+
 .product{
     width: 310px;
     background-color: #fff;
@@ -12,6 +6,10 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     padding: 24px;
     
+}
+.product-img{
+    width: 250px;
+    height: 150px;
 }
 /* .number{
      background-color: #000;
@@ -24,9 +22,6 @@
      font-size: 12px;
 } */
 
-.slider-img{
-    height: 150px;
-}
 .action{
     display: flex;
     margin-top: 10px;
@@ -134,7 +129,7 @@
 .Quantity-hed-name{
     font-size: 16px;
 }
-.Quantity-hed-stock{
+.Quantity-hed-instock{
     font-size: 12px;
     height: 20px;
     background-color: rgb(168, 219, 168);
@@ -142,6 +137,17 @@
     margin: 4px 0 0 10px;
     text-align: center;
     color: #4a4949;
+    padding: 0 8px;
+    
+}
+.Quantity-hed-outstock{
+    font-size: 12px;
+    height: 20px;
+    background-color: rgb(216, 78, 92);
+    border-radius: 60px;
+    margin: 4px 0 0 10px;
+    text-align: center;
+    color: #fff;
     padding: 0 8px;
     
 }
