@@ -40,12 +40,20 @@
         </button>
       </div>
 </div>
-  <!-- product -->
-  <div class="main-product container ">
-    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
-      <div *ngFor="let p of products; index as i">
-          <app-product [data]="p"></app-product>
-      </div>
-    </div>
 
+
+<!-- product -->
+<div class="main-product container ">
+  <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+    <div *ngFor="let p of products; index as i">
+      <app-product [data]="p" (dataChange)="calTotal()"></app-product>
+    </div>
   </div>
+  
+  <!-- Total -->
+  <div class="main-total">
+    <div class="total-price">
+      <h1>Total Price: {{total}}đ</h1>
+    </div>
+  </div>
+</div>

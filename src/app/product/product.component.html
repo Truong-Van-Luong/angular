@@ -21,7 +21,7 @@
           <div class="color">
               <span class="color-name">Color</span>
               <div class="color-primary">
-                 <div *ngFor="let color of colors"  class="main-color" [ngClass]="color.class" [class.active-color]="color === selectedColor" (click)="selectedColor = color">
+                 <div *ngFor="let color of colors" class="main-color" [ngClass]="color.class" [class.active-color]="color === selectedColor" (click)="selectedColor = color">
               </div>
           </div>
 
@@ -42,7 +42,7 @@
                   </div>
               </div>
               
-              <input class="form-control input-price" type="number">
+              <input class="form-control input-price" type="number" name="quantity" (change)="sizeChange($event)" min="0" max="10" value="0" >
           </div>
           <div class="interact">
               <div class="interact-icon"></div>
