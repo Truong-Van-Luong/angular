@@ -1,0 +1,62 @@
+<div class="home-product container">
+    <div class="main-detail "*ngIf="product" >
+        <div class="list-img">
+            <div class="list-img-div" >
+
+                <img [src]="product.image" alt="" class="item-img">
+            </div>
+             <div class="list-img-div">
+
+                <img [src]="product.image" alt="" class="item-img">
+            </div> 
+            <div class="list-img-div">
+
+                <img [src]="product.image" alt="" class="item-img">
+            </div>
+           
+        </div>
+        <div class="hed-img">
+            <img [src]="product.image" alt="" class="sub-img">
+            <div class="description">
+                <h6 class="description-name">About This Product</h6>
+                <span class="description-sub">
+                    {{product.content}}
+                </span>
+            </div>
+        </div>
+        <div class="action">
+             <h2 class="action-name">{{product.title}}</h2>
+             <span class="action-price">{{product.price}}đ</span><br>
+             <span class="action-sizes-name">Available Sizes</span>
+             <div class="action-sizes">
+                <div *ngFor="let size of sizes" class="action-sizes-item" [class.active]="size === selectedSize" (click)="selectedSize = size">
+                    {{ size }}
+                  </div>
+             </div>
+             <div class="action-colors">
+                <span class="action-colors-name">Available colours</span>
+                <div class="action-colors-list">
+                    <!-- <div class="action-colors-item">Black</div>
+                    <div class="action-colors-item">White</div> -->
+                    <div *ngFor="let color of colors" class="action-colors-item" [class.active]="color === selectedColor" (click)="selectedColor = color">
+                        {{color}}
+                    </div>
+                </div>
+             </div>
+             <div class="action-quantity">
+                <span class="action-quantity-name">Quantity</span>
+                <input type="number" min="0" max="10" value="0" class="action-quantity-ip">
+             </div>
+             <div class="action-btn">
+                <button  class="action-btn-pr" >Add To Cart</button>
+                <i class="fa-regular fa-heart" class="action-icon"></i>
+             </div>
+             <div class="action-icon">
+                <i class="fa-brands fa-facebook action-icon-xh"></i>
+                <i class="fa-brands fa-instagram action-icon-mt action-icon-xh"></i>
+                <i class="fa-brands fa-tiktok action-icon-mt action-icon-xh "></i>
+             </div>
+        </div>
+    </div>
+</div>
+

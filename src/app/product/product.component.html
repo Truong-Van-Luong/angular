@@ -1,8 +1,8 @@
 
   <!-- Product -->
   <div class="main ">
-      <div class="product" >
-        <img [src]="data.image" class="product-img" alt="">
+      <div class="product " *ngIf="data">
+        <img [src]="data?.image" class="product-img" alt="" [routerLink]="['/product-detail', data.id]">
           <div class="action">
               <h3 class="action-price">{{data.price}}đ</h3>
               <span class="action-price-sale">{{data.priceSale}}đ</span>
@@ -53,6 +53,8 @@
 
   </div>
 
+   
+
 <!-- Add product modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -71,5 +73,17 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+  
+
+  
+
+
+   
+
 
 
